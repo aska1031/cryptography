@@ -22,7 +22,7 @@ def _get_openssl_libraries(platform):
         )
         if windows_link_legacy_openssl is None:
             # Link against the 1.1.0 names
-            libs = ["libssl", "libcrypto"]
+            libs = ["libssl", "libcrypto", "liboqs"]
         else:
             # Link against the 1.0.2 and lower names
             libs = ["libeay32", "ssleay32"]
@@ -33,7 +33,7 @@ def _get_openssl_libraries(platform):
         # specified on the linker command-line is significant;
         # libssl must come before libcrypto
         # (http://marc.info/?l=openssl-users&m=135361825921871)
-        return ["ssl", "crypto"]
+        return ["ssl", "crypto", "oqs"]
 
 
 def _extra_compile_args(platform):
@@ -93,6 +93,13 @@ ffi = build_ffi_for_binding(
         "x509_vfy",
         "pkcs7",
         "callbacks",
+        "qcommon",
+        "qkem",
+        "qkem_sike",
+        "qrand",
+        "qsha3",
+        "qsig",
+        "qsig_qtesla",
     ],
     libraries=_get_openssl_libraries(sys.platform),
     # These args are passed here so that we only do Wconversion checks on the

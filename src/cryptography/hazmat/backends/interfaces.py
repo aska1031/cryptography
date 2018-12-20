@@ -184,7 +184,7 @@ class DSABackend(object):
 class EllipticCurveBackend(object):
     @abc.abstractmethod
     def elliptic_curve_signature_algorithm_supported(
-        self, signature_algorithm, curve
+            self, signature_algorithm, curve
     ):
         """
         Returns True if the backend supports the named elliptic curve with the
@@ -392,4 +392,13 @@ class ScryptBackend(object):
     def derive_scrypt(self, key_material, salt, length, n, r, p):
         """
         Return bytes derived from provided Scrypt parameters.
+        """
+
+
+@six.add_metaclass(abc.ABCMeta)
+class QTESLABackend(object):
+    @abc.abstractmethod
+    def generate_qtesla_keypair(self):
+        """
+        Generate QTESLA public and private keys
         """
