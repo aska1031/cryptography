@@ -22,17 +22,17 @@ static const int OQS_SIG_qTESLA_III_speed_length_signature;
 """
 
 FUNCTIONS = """
-OQS_STATUS OQS_SIG_qTESLA_I_keypair(uint8_t *, uint8_t *);
-OQS_STATUS OQS_SIG_qTESLA_I_sign(uint8_t *, size_t *, const uint8_t *, size_t, const uint8_t *);
-OQS_STATUS OQS_SIG_qTESLA_I_verify(const uint8_t *, size_t, const uint8_t *, size_t, const uint8_t *);
+OQS_STATUS OQS_SIG_qTESLA_I_keypair(unsigned char *, unsigned char *);
+OQS_STATUS OQS_SIG_qTESLA_I_sign(unsigned char *, size_t *, const unsigned char *, size_t, const unsigned char *);
+OQS_STATUS OQS_SIG_qTESLA_I_verify(const unsigned char *, size_t, const unsigned char *, size_t, const unsigned char *);
 
-OQS_STATUS OQS_SIG_qTESLA_III_size_keypair(uint8_t *, uint8_t *);
-OQS_STATUS OQS_SIG_qTESLA_III_size_sign(uint8_t *, size_t *, const uint8_t *, size_t, const uint8_t *);
-OQS_STATUS OQS_SIG_qTESLA_III_size_verify(const uint8_t *, size_t, const uint8_t *, size_t, const uint8_t *);
+OQS_STATUS OQS_SIG_qTESLA_III_size_keypair(unsigned char *, unsigned char *);
+OQS_STATUS OQS_SIG_qTESLA_III_size_sign(unsigned char *, size_t *, const unsigned char *, size_t, const unsigned char *);
+OQS_STATUS OQS_SIG_qTESLA_III_size_verify(const unsigned char *, size_t, const unsigned char *, size_t, const unsigned char *);
 
-OQS_STATUS OQS_SIG_qTESLA_III_speed_keypair(uint8_t *, uint8_t *);
-OQS_STATUS OQS_SIG_qTESLA_III_speed_sign(uint8_t *, size_t *, const uint8_t *, size_t, const uint8_t *);
-OQS_STATUS OQS_SIG_qTESLA_III_speed_verify(const uint8_t *, size_t, const uint8_t *, size_t, const uint8_t *);
+OQS_STATUS OQS_SIG_qTESLA_III_speed_keypair(unsigned char *, unsigned char *);
+OQS_STATUS OQS_SIG_qTESLA_III_speed_sign(unsigned char *, size_t *, const unsigned char *, size_t, const unsigned char *);
+OQS_STATUS OQS_SIG_qTESLA_III_speed_verify(const unsigned char *, size_t, const unsigned char *, size_t, const unsigned char *);
 
 """
 
